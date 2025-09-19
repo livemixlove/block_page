@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refocus Time</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: linear-gradient(160deg, #e0f7fa 0%, #f1f8e9 55%, #fffde7 100%);
+      --text: #1b263b;
+      --card-bg: rgba(255, 255, 255, 0.82);
+      --card-border: rgba(27, 38, 59, 0.12);
+      --accent: #00796b;
+      --accent-soft: rgba(0, 121, 107, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      color: var(--text);
+      padding: 32px 16px;
+    }
+
+    main {
+      max-width: 880px;
+      width: 100%;
+      background: var(--card-bg);
+      border-radius: 24px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 24px 60px rgba(27, 38, 59, 0.12);
+      padding: 48px clamp(24px, 4vw, 64px);
+      backdrop-filter: blur(12px);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: clamp(36px, 6vw, 54px);
+      line-height: 1.1;
+    }
+
+    h2 {
+      margin-top: 32px;
+      font-size: 22px;
+      letter-spacing: 0.01em;
+    }
+
+    p.lead {
+      font-size: clamp(18px, 2.6vw, 22px);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    ul {
+      margin: 16px 0 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 16px;
+    }
+
+    li {
+      background: var(--accent-soft);
+      border-radius: 16px;
+      padding: 16px 20px;
+      line-height: 1.5;
+      position: relative;
+      border: 1px solid rgba(0, 121, 107, 0.08);
+    }
+
+    li::before {
+      content: "→";
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    li span {
+      display: block;
+      margin-left: 28px;
+    }
+
+    .quote {
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 18px;
+      border-left: 4px solid var(--accent);
+      padding-left: 16px;
+      color: rgba(10, 38, 64, 0.7);
+    }
+
+    .actions {
+      margin-top: 40px;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .action-card {
+      border-radius: 18px;
+      padding: 18px;
+      border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.65);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .action-card strong {
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 56px;
+      font-size: 14px;
+      color: rgba(27, 38, 59, 0.6);
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 36px 20px;
+      }
+
+      li::before {
+        left: 12px;
+      }
+
+      li span {
+        margin-left: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Take a Breath, Paul.</h1>
+    <p class="lead">You promised yourself that your attention is for the work and the life you really want. This page is here to remind you of what matters more than another minute lost in the scroll.</p>
+
+    <h2>Choose something that moves you forward:</h2>
+    <ul>
+      <li><span>Review today’s top priority task and make the next tiny move.</span></li>
+      <li><span>Stand up, stretch, refill your water. Reset your body so your mind can focus.</span></li>
+      <li><span>Open your notebook and capture one idea you’ve been putting off exploring.</span></li>
+      <li><span>Reach out to someone you’ve been meaning to connect with—a quick message counts.</span></li>
+      <li><span>Spend ten mindful minutes reading something that inspires your long-term goals.</span></li>
+      <li><span>Step outside, breathe deeply, and notice the details of the world around you.</span></li>
+      <li><span>Check your goal tracker: what’s one action that earns Future You a win?</span></li>
+    </ul>
+
+    <div class="quote">“The cost of distraction is the life you never get to live. Choose the one you really want.”</div>
+
+    <div class="actions">
+      <div class="action-card">
+        <strong>Reset Ritual</strong>
+        <span>Close unnecessary tabs, silence your phone, set a 25-minute focus timer.</span>
+      </div>
+      <div class="action-card">
+        <strong>Momentum Boost</strong>
+        <span>Pick a task under five minutes. Finish it now to rebuild trust in your focus.</span>
+      </div>
+      <div class="action-card">
+        <strong>Invest in Energy</strong>
+        <span>Grab a healthy snack or take a brief walk—fuel supports attention.</span>
+      </div>
+      <div class="action-card">
+        <strong>Celebrate Progress</strong>
+        <span>Write down one win from today, no matter how small. Momentum loves gratitude.</span>
+      </div>
+    </div>
+
+    <footer>Come back to the work that matters. Your future self is already grateful.</footer>
+  </main>
+</body>
+</html>
